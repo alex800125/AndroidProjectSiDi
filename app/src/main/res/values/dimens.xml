@@ -1,3 +1,8 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+    <!--  TODO criar dimens e colocar aqui o seu valor  -->
+    <dimen type="dimen" name="margin_left">0.25</dimen>
+    <float name="margin_right">75</float>
+    <item name="margin_right" type="dimen">0.5</item>
+    <fraction name="guideline_perc">0.5</fraction>
+    <item name="teste" type="dimen">50%</item>
 </resources>
