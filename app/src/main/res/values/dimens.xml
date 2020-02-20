@@ -1,8 +1,13 @@
 <resources>
-    <!--  TODO criar dimens e colocar aqui o seu valor  -->
-    <dimen type="dimen" name="margin_left">0.25</dimen>
-    <float name="margin_right">75</float>
-    <item name="margin_right" type="dimen">0.5</item>
-    <fraction name="guideline_perc">0.5</fraction>
-    <item name="teste" type="dimen">50%</item>
+    <!--  GUIDELINES  -->
+    <fraction name="margin_left">0.25</fraction>
+    <fraction name="margin_right">0.75</fraction>
+
+    <fraction name="margin_top">0.25</fraction>
+    <fraction name="margin_middle">0.5</fraction>
+    <fraction name="margin_bottom">0.75</fraction>
+
+    <!--  BUTTON  -->
+    <fraction name="button_width">1</fraction>
+    <fraction name="button_height">0.8</fraction>
 </resources>

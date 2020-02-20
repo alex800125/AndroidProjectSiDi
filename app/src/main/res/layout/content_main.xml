@@ -8,30 +8,63 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-<!--    <Button-->
-<!--        android:id="@+id/first_button"-->
-<!--        android:layout_width="3dp"-->
-<!--        android:layout_height="@dimen/teste"-->
-<!--        android:paddingVertical="@dimen/margin_left"-->
-<!--        android:text="Button"-->
-<!--        tools:layout_editor_absoluteX="10dp"-->
-<!--        tools:layout_editor_absoluteY="142dp" />-->
-
-    <!-- TODO verificar como colocar porcentagem no dimens e chamar aqui -->
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_left"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25"/>
+        app:layout_constraintGuide_percent="@fraction/margin_left" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintGuide_percent="@fraction/margin_right" />
 
-        app:layout_constraintGuide_percent=""/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@fraction/margin_top" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@fraction/margin_middle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@fraction/margin_bottom" />
+
+    <!--  TODO descobrir como remover o layout_height e layout_width  -->
+
+    <Button
+        android:id="@+id/first_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@color/color_first_button"
+        android:text="@string/name_first_button"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_middle"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@color/color_second_button"
+        android:text="@string/name_second_button"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@id/guideline_middle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
