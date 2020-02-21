@@ -2,12 +2,11 @@
     <!--  GUIDELINES  -->
     <fraction name="margin_left">0.25</fraction>
     <fraction name="margin_right">0.75</fraction>
-
     <fraction name="margin_top">0.25</fraction>
     <fraction name="margin_middle">0.5</fraction>
     <fraction name="margin_bottom">0.75</fraction>
 
     <!--  BUTTON  -->
-    <fraction name="button_width">1</fraction>
-    <fraction name="button_height">0.8</fraction>
+    <dimen name="button_width">0dp</dimen>
+    <dimen name="button_height">0dp</dimen>
 </resources>
