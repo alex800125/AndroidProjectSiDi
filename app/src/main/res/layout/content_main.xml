@@ -43,22 +43,19 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="@fraction/margin_bottom" />
 
-    <Button
+    <Button style="@style/Button"
         android:id="@+id/first_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:background="@color/color_button"
-        android:text="@string/name_first_button"
         app:layout_constraintBottom_toBottomOf="@id/guideline_middle"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
-    <Button
+    <Button style="@style/Button"
         android:id="@+id/second_button"
         android:layout_width="@dimen/button_height"
         android:layout_height="@dimen/button_width"
-        android:background="@color/color_button"
         android:text="@string/name_second_button"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"

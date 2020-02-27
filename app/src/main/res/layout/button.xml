@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--  TODO this does not work, check the correct way of use  -->
+    <!--  TODO - Pesquisar a tag <include> e usa-la para definir o botão  -->
 
     <Button
         android:layout_width="100dp"
