@@ -43,7 +43,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="@fraction/margin_bottom" />
 
-    <Button style="@style/Button"
+    <include layout="@layout/button"
         android:id="@+id/first_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -52,14 +52,15 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
-    <Button style="@style/Button"
+    <include layout="@layout/button"
         android:id="@+id/second_button"
-        android:layout_width="@dimen/button_height"
-        android:layout_height="@dimen/button_width"
-        android:text="@string/name_second_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/guideline_middle" />
+
+    <!--  https://material.io/develop/android/components/text-input-layout/  -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

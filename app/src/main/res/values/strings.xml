@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Project Weekly challenge</string>
     <string name="action_settings">Weekly challenge</string>
-    <string name="name_first_button">First Button</string>
-    <string name="name_second_button">Second Button</string>
+    <string name="button_name">Button Button Button Button Button Button Button Button Button</string>
 </resources>

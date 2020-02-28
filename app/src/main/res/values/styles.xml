@@ -21,9 +21,9 @@
     <style name="Button" parent="Widget.AppCompat.Button">
         <item name="android:background">@color/color_button</item>
         <item name="android:layout_margin">@dimen/button_margin</item>
-        <item name="android:text">@string/name_first_button</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:textSize">@dimen/button_textSize</item>
+        <item name="android:singleLine">true</item>
     </style>
 
 </resources>

@@ -3,12 +3,9 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--  TODO - Pesquisar a tag <include> e usa-la para definir o botão  -->
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@color/color_button"
-        android:text="@string/name_first_button" />
+    <Button style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/button_name" />
 
 </LinearLayout>
