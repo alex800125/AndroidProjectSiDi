@@ -30,11 +30,18 @@
         app:layout_constraintGuide_percent="@fraction/margin_top" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_middle"
+        android:id="@+id/guideline_first_middle"
         android:layout_width="wrap_content"
-        android:layout_height="10dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@fraction/margin_middle" />
+        app:layout_constraintGuide_percent="@fraction/margin_first_middle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_second_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@fraction/margin_second_middle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
@@ -47,7 +54,7 @@
         android:id="@+id/first_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_middle"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_first_middle"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
@@ -56,11 +63,14 @@
         android:id="@+id/second_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_second_middle"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/guideline_middle" />
+        app:layout_constraintTop_toBottomOf="@id/guideline_first_middle" />
 
-    <!--  https://material.io/develop/android/components/text-input-layout/  -->
+    <!--  TODO Criar terceiro botão
+        - incluir mais um botão mas com cor e texto diferente;
+	    - terceiro botão = texto diferente pra android >= Q;
+     -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

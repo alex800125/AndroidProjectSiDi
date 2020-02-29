@@ -1,10 +1,14 @@
 <resources>
+    <!--  TODO criar em values um XML para float
+        - retirar do dimens a números fracionários;
+    -->
     <!--  GUIDELINES  -->
     <fraction name="margin_left">0.25</fraction>
     <fraction name="margin_right">0.75</fraction>
-    <fraction name="margin_top">0.25</fraction>
-    <fraction name="margin_middle">0.5</fraction>
-    <fraction name="margin_bottom">0.75</fraction>
+    <fraction name="margin_top">0.20</fraction>
+    <fraction name="margin_first_middle">0.40</fraction>
+    <fraction name="margin_second_middle">0.60</fraction>
+    <fraction name="margin_bottom">0.80</fraction>
 
     <!--  BUTTON  -->
     <dimen name="button_width">0dp</dimen>
