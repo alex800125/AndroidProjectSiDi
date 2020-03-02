@@ -13,42 +13,42 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="@fraction/margin_left" />
+        app:layout_constraintGuide_percent="@dimen/margin_left" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="@fraction/margin_right" />
+        app:layout_constraintGuide_percent="@dimen/margin_right" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@fraction/margin_top" />
+        app:layout_constraintGuide_percent="@dimen/margin_top" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_first_middle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@fraction/margin_first_middle" />
+        app:layout_constraintGuide_percent="@dimen/margin_first_middle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_second_middle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@fraction/margin_second_middle" />
+        app:layout_constraintGuide_percent="@dimen/margin_second_middle" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="@fraction/margin_bottom" />
+        app:layout_constraintGuide_percent="@dimen/margin_bottom" />
 
     <include layout="@layout/button"
         android:id="@+id/first_button"
@@ -68,9 +68,14 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/guideline_first_middle" />
 
-    <!--  TODO Criar terceiro botão
-        - incluir mais um botão mas com cor e texto diferente;
-	    - terceiro botão = texto diferente pra android >= Q;
-     -->
+    <Button style="@style/style_button"
+        android:id="@+id/third_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/third_button_name"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_second_middle"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

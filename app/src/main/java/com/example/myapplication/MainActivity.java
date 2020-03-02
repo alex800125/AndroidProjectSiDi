@@ -13,7 +13,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-    // TODO - implementar internacionalização
-    // - de acordo com a linguagem do device (inglês e português);
+        // TODO - implementar texto diferente para android >= Q
+        // - verificar como faz, ai trocar cor de fundo para uma outra
+
+        // TODO - implementar internacionalização
+        // - de acordo com a linguagem do device (inglês e português);
     }
 }
