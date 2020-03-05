@@ -2,6 +2,6 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="color_button">#7f00ff</color>
-    <color name="color_third_button">#00ff00</color>
+    <color name="color_button">#7777ff</color>
+    <color name="color_third_button">#ff0000</color>
 </resources>
