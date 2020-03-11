@@ -1,6 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Project Weekly Challenge</string>
-    <string name="action_settings">Weekly Challenge</string>
     <string name="button_name">Button Button Button Button Button Button Button Button Button</string>
-    <string name="third_button_name">Third Button</string>
+
+    <string name="third_button_name" tools:ignore="MissingTranslation">@string/new_button</string>
+    <string name="new_button">Default Text</string>
+    <string name="new_button_v29">Default text - Android Q</string>
 </resources>

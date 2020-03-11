@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Projeto Desafio Semanal</string>
-    <string name="action_settings">Desafio Semanal</string>
     <string name="button_name">Botão Botão Botão Botão Botão Botão Botão Botão</string>
-    <string name="third_button_name">Terceiro Botão</string>
+
+    <string name="new_button">Terceiro botão</string>
+    <string name="new_button_v29">Terceiro botão - Android Q</string>
 </resources>
