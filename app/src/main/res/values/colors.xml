@@ -2,6 +2,22 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="color_button">#7f00ff</color>
-    <color name="color_third_button">#00ff00</color>
+
+    <!-- default color of the two buttons -->
+    <color name="color_button">@color/color_button_values</color>
+    <color name="color_button_values">#fe0000</color>
+
+    <!-- default color of the two buttons in night mode -->
+    <color name="color_button_night">@color/color_button_night_values</color>
+    <color name="color_button_night_values">#fefe00</color>
+
+    <!-- default color of the third button -->
+    <color name="color_third_button">@color/color_third_button_values</color>
+    <color name="color_third_button_values">#A600FF</color>
+    <color name="color_third_button_values_v29">#FC38FF</color>
+
+    <!-- default color of the third button in night mode -->
+    <color name="color_third_button_night">@color/color_third_button_night_values</color>
+    <color name="color_third_button_night_values">#807487</color>
+    <color name="color_third_button_night_values_v29">#580087</color>
 </resources>
