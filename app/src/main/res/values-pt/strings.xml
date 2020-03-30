@@ -4,4 +4,13 @@
 
     <string name="new_button">Terceiro botão</string>
     <string name="new_button_v29">Terceiro botão - Android Q</string>
+
+    <string name="first_button_message">O Primeiro Botão foi pressionado</string>
+    <string name="second_button_message">O Segundo Botão foi pressionado</string>
+    <string name="third_button_message">O Terceiro Botão foi pressionado</string>
+
+    <!-- Dialog texts -->
+    <string name="title_dialog">Este é o titulo do Dialog</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
 </resources>

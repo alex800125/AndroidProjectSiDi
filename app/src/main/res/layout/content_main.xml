@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -50,7 +51,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="@dimen/margin_bottom" />
 
-    <include layout="@layout/button"
+    <Button style="@style/style_button"
         android:id="@+id/first_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
@@ -59,7 +60,7 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
-    <include layout="@layout/button"
+    <Button style="@style/style_button"
         android:id="@+id/second_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
