@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,5 +40,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     public void showToast() {
         Toast.makeText(this, R.string.first_button_message, Toast.LENGTH_LONG).show();
+    }
+
+    public void showDialog() {
+        final AlertDialog alertDialog = new DialogFactory().Dialog(this);
+        alertDialog.show();
+    }
+
+    public void logError(String text) {
+        Log.e(TAG, text);
     }
 }

@@ -4,11 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 
-public class Dialog {
+public class DialogFactory {
 
-    private final AlertDialog alertDialog;
-
-    Dialog(final Context context) {
+    public AlertDialog Dialog(final Context context) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder.setTitle(R.string.title_dialog);
 
@@ -28,7 +26,6 @@ public class Dialog {
                     }
                 });
 
-        alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+        return alertDialogBuilder.create();
     }
 }
