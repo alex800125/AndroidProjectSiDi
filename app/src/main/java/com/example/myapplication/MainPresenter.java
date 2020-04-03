@@ -1,37 +1,37 @@
 package com.example.myapplication;
 
-import android.content.Context;
-import android.view.View;
+import android.util.Log;
 
-public class MainPresenter extends MainActivity {
+public class MainPresenter implements MainContract.Presenter {
 
-    public void onClickView(View view, Context context) {
+    private MainContract.View view;
 
-        switch (view.getId()) {
-            case R.id.first_button:
-                firstButtonAction(context);
+    private static String TAG = "MainPresenter";
+
+    MainPresenter(MainContract.View view) {
+        Log.d(TAG, "Setting the view");
+        this.view = view;
+    }
+
+    public void handleButtonClicked(int buttonId) {
+        Log.d(TAG, "Enter in the handleButtonClicked function");
+        switch (buttonId) {
+            case Buttons.toast_button:
+                view.showToast();
                 break;
 
-            case R.id.second_button:
-                secondButtonAction(context);
+            case Buttons.dialog_button:
+                Log.d(TAG, "Dialog button");
                 break;
 
-            case R.id.third_button:
-                thirdButtonAction();
+            case Buttons.new_activity_button:
+                Log.d(TAG, "Missing the start new Activity and receive the result when it reaches the end;");
+                // https://developer.android.com/training/basics/intents/result
+                break;
+
+            default:
+                Log.e(TAG, "No recognized button");
                 break;
         }
-    }
-
-    public void firstButtonAction(Context context) {
-        MainActivity.showToast(context);
-    }
-
-    public void secondButtonAction(Context context) {
-        new Dialog(context);
-    }
-
-    public void thirdButtonAction() {
-        // Missing the start new Activity and receive the result when it reaches the end;
-        // https://developer.android.com/training/basics/intents/result
     }
 }

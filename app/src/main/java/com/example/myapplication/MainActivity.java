@@ -1,7 +1,7 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -9,9 +9,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements MainContract.View, View.OnClickListener {
 
-    private MainPresenter mainPresenter;
+    private MainContract.Presenter presenter;
+
+    private static String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +22,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mainPresenter = new MainPresenter();
+        presenter = new MainPresenter(this);
 
-        final Button btn1 = findViewById(R.id.first_button);
-        final Button btn2 = findViewById(R.id.second_button);
-        final Button btn3 = findViewById(R.id.third_button);
+        Button btn1 = findViewById(R.id.first_button);
+        Button btn2 = findViewById(R.id.second_button);
+        Button btn3 = findViewById(R.id.third_button);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -32,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
-        mainPresenter.onClickView(v, this);
+        presenter.handleButtonClicked(v.getId());
     }
 
-    public static void showToast(Context context) {
-        Toast.makeText(context, R.string.first_button_message, Toast.LENGTH_SHORT).show();
+    public void showToast() {
+        Toast.makeText(this, R.string.first_button_message, Toast.LENGTH_LONG).show();
     }
 }
