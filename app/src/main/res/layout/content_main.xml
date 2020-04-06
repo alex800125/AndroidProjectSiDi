@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <androidx.constraintlayout.widget.Guideline
@@ -51,8 +51,9 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="@dimen/margin_bottom" />
 
-    <Button style="@style/style_button"
+    <Button
         android:id="@+id/first_button"
+        style="@style/style_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         app:layout_constraintBottom_toBottomOf="@id/guideline_first_middle"
@@ -60,8 +61,9 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="@id/guideline_top" />
 
-    <Button style="@style/style_button"
+    <Button
         android:id="@+id/second_button"
+        style="@style/style_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         app:layout_constraintBottom_toBottomOf="@id/guideline_second_middle"
@@ -69,15 +71,16 @@
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@id/guideline_first_middle" />
 
-    <Button style="@style/style_button"
+    <Button
         android:id="@+id/third_button"
+        style="@style/style_button"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
-        android:text="@string/third_button_name"
         android:background="@color/color_third_button"
+        android:text="@string/third_button_name"
         app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@id/guideline_second_middle"/>
+        app:layout_constraintTop_toBottomOf="@id/guideline_second_middle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,4 +13,6 @@
     <string name="title_dialog">This is the title of Dialog</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+
+    <string name="setting_screen_text">Setting Screen</string>
 </resources>

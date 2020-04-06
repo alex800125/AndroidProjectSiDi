@@ -1,13 +1,21 @@
-package com.example.myapplication;
+package com.example.myapplication.presenter;
+
+import com.example.myapplication.MainContract;
+import com.example.myapplication.util.Buttons;
 
 public class MainPresenter implements MainContract.Presenter {
 
     private MainContract.View view;
 
-    MainPresenter(MainContract.View view) {
+    public MainPresenter(MainContract.View view) {
         this.view = view;
     }
 
+    /**
+     * This function is responsible to receiving the call from MainPresenter and making a decision.
+     *
+     * @param buttonId This param represent the current id of the button has been tapped.
+     */
     public void handleButtonClicked(int buttonId) {
         switch (buttonId) {
             case Buttons.toast_button:
@@ -19,8 +27,7 @@ public class MainPresenter implements MainContract.Presenter {
                 break;
 
             case Buttons.new_activity_button:
-                // Missing the start new Activity and receive the result when it reaches the end
-                // https://developer.android.com/training/basics/intents/result
+                view.showSettingScreen();
                 break;
 
             default:

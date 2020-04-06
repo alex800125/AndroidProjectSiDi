@@ -13,4 +13,6 @@
     <string name="title_dialog">Este é o titulo do Dialog</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
+
+    <string name="setting_screen_text">Tela de configurações</string>
 </resources>

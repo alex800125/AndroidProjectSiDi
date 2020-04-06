@@ -7,6 +7,8 @@ public interface MainContract {
 
         void showDialog();
 
+        void showSettingScreen();
+
         void logError(String text);
     }
 
