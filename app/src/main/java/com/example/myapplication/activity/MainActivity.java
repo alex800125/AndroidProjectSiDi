@@ -21,14 +21,14 @@ import com.example.myapplication.dialog.DialogFactory;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View, View.OnClickListener {
 
-    private MainContract.Presenter presenter;
+    private MainContract.Presenter mPresenter;
 
-    private static String TAG = "MainActivity";
+    private static final String TAG = "MainActivity";
 
     /**
      * Default number to request of third button
      */
-    private int REQUEST_CODE = 1;
+    private static final int REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        presenter = new MainPresenter(this);
+        mPresenter = new MainPresenter(this);
 
         Button btn1 = findViewById(R.id.first_button);
         Button btn2 = findViewById(R.id.second_button);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     public void onClick(View view) {
-        presenter.handleButtonClicked(view.getId());
+        mPresenter.handleButtonClicked(view.getId());
     }
 
     /**
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
      */
     public void showToast() {
         Toast.makeText(this,
-                ResourceUtils.getString(getResources(), R.string.first_button_message),
+                ResourceUtils.getString(getResources(), R.string.message_first_button),
                 Toast.LENGTH_LONG).show();
     }
 
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         if (requestCode == REQUEST_CODE) {
             if (RESULT_OK == resultCode) {
                 Toast.makeText(this,
-                        ResourceUtils.getString(getResources(), R.string.third_button_message),
+                        ResourceUtils.getString(getResources(), R.string.message_third_button),
                         Toast.LENGTH_LONG).show();
             }
         } else {

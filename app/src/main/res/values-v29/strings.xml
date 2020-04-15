@@ -1,3 +1,3 @@
 <resources>
-    <string name="third_button_name">@string/new_button_v29</string>
+    <string name="title_third_button">@string/title_third_button_string_v29</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- the color of the buttons are changed in night mode -->
-    <color name="color_button">@color/color_button_night</color>
+    <color name="color_first_second_button">@color/color_first_second_button_night</color>
     <color name="color_third_button">@color/color_third_button_night</color>
 </resources>

@@ -15,18 +15,18 @@ public class DialogFactory {
      */
     public static AlertDialog Dialog(final Context context) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-        alertDialogBuilder.setTitle(ResourceUtils.getString(context.getResources(), R.string.title_dialog));
+        alertDialogBuilder.setTitle(ResourceUtils.getString(context.getResources(), R.string.title_second_button_dialog));
 
         alertDialogBuilder
-                .setMessage(ResourceUtils.getString(context.getResources(), R.string.second_button_message))
+                .setMessage(ResourceUtils.getString(context.getResources(), R.string.message_second_button))
                 .setCancelable(false)
-                .setPositiveButton(ResourceUtils.getString(context.getResources(), R.string.yes), new DialogInterface.OnClickListener() {
+                .setPositiveButton(ResourceUtils.getString(context.getResources(), R.string.info_yes), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // This command just closes the Dialog
                         dialog.cancel();
                     }
                 })
-                .setNegativeButton(ResourceUtils.getString(context.getResources(), R.string.no), new DialogInterface.OnClickListener() {
+                .setNegativeButton(ResourceUtils.getString(context.getResources(), R.string.info_no), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // This command just closes the Dialog
                         dialog.cancel();

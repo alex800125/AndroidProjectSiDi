@@ -21,12 +21,12 @@
     <style name="style_button" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/color_button</item>
+        <item name="android:background">@color/color_first_second_button</item>
         <item name="android:layout_margin">@dimen/button_margin</item>
         <item name="android:padding">@dimen/button_padding</item>
         <item name="android:fontFamily">cursive</item>
         <item name="android:textSize">@dimen/button_textSize</item>
         <item name="android:singleLine">true</item>
-        <item name="android:text">@string/button_name</item>
+        <item name="android:text">@string/title_first_second_button</item>
     </style>
 </resources>

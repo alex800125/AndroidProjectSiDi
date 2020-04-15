@@ -4,12 +4,12 @@
     <color name="colorPrimaryDark">#00574B</color>
 
     <!-- default color of the two buttons -->
-    <color name="color_button">@color/color_button_values</color>
-    <color name="color_button_values">#fe0000</color>
+    <color name="color_first_second_button">@color/color_first_second_button_values</color>
+    <color name="color_first_second_button_values">#fe0000</color>
 
     <!-- default color of the two buttons in night mode -->
-    <color name="color_button_night">@color/color_button_night_values</color>
-    <color name="color_button_night_values">#fefe00</color>
+    <color name="color_first_second_button_night">@color/color_first_second_button_night_values</color>
+    <color name="color_first_second_button_night_values">#fefe00</color>
 
     <!-- default color of the third button -->
     <color name="color_third_button">@color/color_third_button_values</color>
