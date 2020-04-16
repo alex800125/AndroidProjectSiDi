@@ -2,7 +2,7 @@ package com.example.myapplication.util;
 
 import com.example.myapplication.R;
 
-public class Buttons {
+public class ButtonUtils {
 
     public static final int toast_button = R.id.first_button;
 

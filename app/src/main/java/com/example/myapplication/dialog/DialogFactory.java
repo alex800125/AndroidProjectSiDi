@@ -13,12 +13,12 @@ public class DialogFactory {
      * @param context reference to Android context.
      * @return The result is a AlertDialog created, with the values shown fixed.
      */
-    public static AlertDialog Dialog(final Context context) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-        alertDialogBuilder.setTitle(ResourceUtils.getString(context.getResources(), R.string.title_second_button_dialog));
+    public static AlertDialog CustomDialog(final Context context, final String title, final String message) {
+        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder.setTitle(title);
 
         alertDialogBuilder
-                .setMessage(ResourceUtils.getString(context.getResources(), R.string.message_second_button))
+                .setMessage(message)
                 .setCancelable(false)
                 .setPositiveButton(ResourceUtils.getString(context.getResources(), R.string.info_yes), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {

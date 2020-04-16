@@ -3,7 +3,6 @@ package com.example.myapplication.activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.myapplication.MainContract;
 import com.example.myapplication.R;
 import com.example.myapplication.presenter.MainPresenter;
+import com.example.myapplication.util.LogTag;
 import com.example.myapplication.util.ResourceUtils;
 
 import com.example.myapplication.dialog.DialogFactory;
@@ -65,7 +65,9 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
      * This function is responsible for the Second Button Actions, called by the MainPresenter.
      */
     public void showDialog() {
-        final AlertDialog alertDialog = DialogFactory.Dialog(this);
+        final AlertDialog alertDialog = DialogFactory.CustomDialog(this,
+                ResourceUtils.getString(getResources(), R.string.title_second_button_dialog),
+                ResourceUtils.getString(getResources(), R.string.message_second_button));
         alertDialog.show();
     }
 
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
      * @param text The text contains the text that will be shown in the log.
      */
     public void logError(String text) {
-        Log.e(TAG, text);
+        LogTag.e(TAG, text);
     }
 
     /**

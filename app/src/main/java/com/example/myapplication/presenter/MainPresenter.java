@@ -1,13 +1,12 @@
 package com.example.myapplication.presenter;
 
 import com.example.myapplication.MainContract;
-import com.example.myapplication.util.Buttons;
+import com.example.myapplication.util.ButtonUtils;
+import com.example.myapplication.util.UIConstantsUtils;
 
 public class MainPresenter implements MainContract.Presenter {
 
     private MainContract.View mView;
-
-    private static final String ERROR_MESSAGE = "No recognized button";
 
     public MainPresenter(MainContract.View view) {
         this.mView = view;
@@ -20,20 +19,20 @@ public class MainPresenter implements MainContract.Presenter {
      */
     public void handleButtonClicked(int buttonId) {
         switch (buttonId) {
-            case Buttons.toast_button:
+            case ButtonUtils.toast_button:
                 mView.showToast();
                 break;
 
-            case Buttons.dialog_button:
+            case ButtonUtils.dialog_button:
                 mView.showDialog();
                 break;
 
-            case Buttons.new_activity_button:
+            case ButtonUtils.new_activity_button:
                 mView.showSettingScreen();
                 break;
 
             default:
-                mView.logError(ERROR_MESSAGE);
+                mView.logError(UIConstantsUtils.ERROR_MESSAGE);
                 break;
         }
     }
