@@ -15,22 +15,25 @@ public class MainPresenter implements MainContract.Presenter {
     /**
      * This function is responsible to receiving the call from MainPresenter and making a decision.
      *
-     * @param buttonId This param represent the current id of the button has been tapped.
+     * @param buttonId This param represent the current ID of the button has been tapped.
      */
-    public void handleButtonClicked(int buttonId) {
-        switch (buttonId) {
-            case ButtonUtils.toast_button:
+    public void handleButtonClicked(final int buttonId) {
+        final ButtonUtils.MainActivityButton mainActivityButton = ButtonUtils.MainActivityButton.compareId(buttonId);
+
+        switch (mainActivityButton) {
+            case TOAST_BUTTON:
                 mView.showToast();
                 break;
 
-            case ButtonUtils.dialog_button:
+            case DIALOG_BUTTON:
                 mView.showDialog();
                 break;
 
-            case ButtonUtils.new_activity_button:
+            case NEW_ACTIVITY_BUTTON:
                 mView.showSettingScreen();
                 break;
 
+            case INVALID_BUTTON:
             default:
                 mView.logError(UIConstantsUtils.ERROR_MESSAGE);
                 break;

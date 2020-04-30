@@ -13,11 +13,10 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.myapplication.MainContract;
 import com.example.myapplication.R;
+import com.example.myapplication.dialog.DialogFactory;
 import com.example.myapplication.presenter.MainPresenter;
 import com.example.myapplication.util.LogTag;
 import com.example.myapplication.util.ResourceUtils;
-
-import com.example.myapplication.dialog.DialogFactory;
 
 public class MainActivity extends AppCompatActivity implements MainContract.View, View.OnClickListener {
 
@@ -49,26 +48,47 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     public void onClick(View view) {
-        mPresenter.handleButtonClicked(view.getId());
+        int button_id;
+
+        switch (view.getId()) {
+            case R.id.first_button:
+                button_id = 1;
+                break;
+            case R.id.second_button:
+                button_id = 2;
+                break;
+            case R.id.third_button:
+                button_id = 3;
+                break;
+            default:
+                button_id = 0;
+                break;
+        }
+
+        mPresenter.handleButtonClicked(button_id);
     }
 
     /**
      * This function is responsible for the First Button Actions, called by the MainPresenter.
      */
     public void showToast() {
-        Toast.makeText(this,
-                ResourceUtils.getString(getResources(), R.string.message_first_button),
-                Toast.LENGTH_LONG).show();
+        final String text = ResourceUtils.getString(getResources(), R.string.message_first_button);
+        if (!text.equals("")) {
+            Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+        }
     }
 
     /**
      * This function is responsible for the Second Button Actions, called by the MainPresenter.
      */
     public void showDialog() {
-        final AlertDialog alertDialog = DialogFactory.CustomDialog(this,
-                ResourceUtils.getString(getResources(), R.string.title_second_button_dialog),
-                ResourceUtils.getString(getResources(), R.string.message_second_button));
-        alertDialog.show();
+        final String titleText = ResourceUtils.getString(getResources(), R.string.title_second_button_dialog);
+        final String messageText = ResourceUtils.getString(getResources(), R.string.message_second_button);
+
+        if (!titleText.equals("") && !messageText.equals("")) {
+            final AlertDialog alertDialog = DialogFactory.CustomDialog(this, titleText, messageText);
+            alertDialog.show();
+        }
     }
 
     /**
@@ -89,19 +109,19 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     }
 
     /**
-     *
      * @param requestCode Contains the REQUEST_CODE, to differentiate from other results
-     * @param resultCode Contains the result of the activity
-     * @param data Contains the Intent original
+     * @param resultCode  Contains the result of the activity
+     * @param data        Contains the Intent original
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUEST_CODE) {
             if (RESULT_OK == resultCode) {
-                Toast.makeText(this,
-                        ResourceUtils.getString(getResources(), R.string.message_third_button),
-                        Toast.LENGTH_LONG).show();
+                final String text = ResourceUtils.getString(getResources(), R.string.message_third_button);
+                if (!text.equals("")) {
+                    Toast.makeText(this, text, Toast.LENGTH_LONG).show();
+                }
             }
         } else {
             logError("Error, there is only one REQUEST_CODE. This wrong value is = " + requestCode);
